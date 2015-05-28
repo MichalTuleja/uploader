@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+	<title>File uploader</title>
+	<script src="vendor/dropzone/dropzone.js"></script>
+	<link rel="stylesheet" href="vendor/dropzone/basic.css">
+	<link rel="stylesheet" href="vendor/dropzone/dropzone.css">
+	
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/scottdorman-bootstrap-flat-f09dc8c/css/bootstrap-flat.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="custom/navbar-static-top.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="cursor:default" href="#">Uploader</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+			<li class=""><a href="#" onclick="helpAlert()">Help</a></li>
+		  </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+        <h2>Upload file here</h2>
+        <p>Use a drag & drop technique, the file will be uploaded immediately.</p>
+		
+		<form action="upload.php" class="dropzone" id="Dropzone">
+		  <div class="fallback">
+			<input name="file" type="file" multiple />
+		  </div>
+		</form>
+		
+		<small>Hint: If you want to upload a whole folder, pack it using zip.</small>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="vendor/jQuery/jquery.min.js"></script>
+    <script src="vendor/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="custom/ie10-viewport-bug-workaround.js"></script>
+	<script src="custom/dropzone-custom.js"></script>
+	<script>
+		function helpAlert() {
+			var text = 'Just drop your files over the box.';
+		
+			alert(text);
+		}
+	</script>
+  </body>
+</html>
